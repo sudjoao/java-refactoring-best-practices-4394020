@@ -9,17 +9,23 @@ package com.linkedin.mod4.challenges.one;
 // The actual implementation is left out for simplicity.
 // The solution can also just contain comments in the extracted methods.
 
-import com.linkedin.mod4.challenges.Order;
-
 public class CheckoutController {
+    final Order order;
+    final MailService mailService;
 
-    public void processOrder(Order order) {
-        // calculate the total amount
-        // apply any discounts
-        // process the payment
-        // send confirmation emails
-        // update the inventory
-        // update the order status
+    public CheckoutController(Order order, MailService mailService) {
+        this.order = order;
+        this.mailService = mailService;
+    }
+
+    public void processOrder() {
+        OrderService.process(order);
+        mailService.sendMail("", "Order processed", "Your order info:" + order);
+        updateInventory();
+    }
+
+    public void updateInventory() {
+
     }
 }
 
