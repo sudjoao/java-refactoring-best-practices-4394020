@@ -7,69 +7,33 @@ package com.linkedin.mod4.challenges.two;
 // and ContactInfo.
 
 public class Patient {
+    private PersonalInfo personalInfo;
+    private ContactInfo contactInfo;
+    private MedicalInfo medicalInfo;
 
-    private String firstName;
-    private String lastName;
-    private int age;
-    private String gender;
-    private String bloodType;
-    private String address;
-    private String phoneNumber;
-
-    public String getFirstName() {
-        return firstName;
+    public MedicalInfo getMedicalInfo() {
+        return medicalInfo;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setMedicalInfo(MedicalInfo medicalInfo) {
+        this.medicalInfo = medicalInfo;
     }
 
-    public String getLastName() {
-        return lastName;
+    public ContactInfo getContactInfo() {
+        return contactInfo;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setContactInfo(ContactInfo contactInfo) {
+        this.contactInfo = contactInfo;
     }
 
-    public int getAge() {
-        return age;
+    public PersonalInfo getPersonalInfo() {
+        return personalInfo;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setPersonalInfo(PersonalInfo personalInfo) {
+        this.personalInfo = personalInfo;
     }
 
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getBloodType() {
-        return bloodType;
-    }
-
-    public void setBloodType(String bloodType) {
-        this.bloodType = bloodType;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
 }
 
