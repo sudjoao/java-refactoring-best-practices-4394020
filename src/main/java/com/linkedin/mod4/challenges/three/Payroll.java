@@ -11,23 +11,19 @@ package com.linkedin.mod4.challenges.three;
 // to represent the process of processing payroll and implement it
 // in the PayrollService class.
 
-import com.linkedin.mod4.challenges.Employee;
-
 import java.util.List;
 
 public class Payroll {
 
-    private List<Employee> employees;
+    private final List<Employee> employees;
 
-    public void calculateSalaries() {
-        // load employee data
-        // calculate gross pay for each employee
-        // calculate taxes for each employee
-        // calculate net pay for each employee
-        // generate pay stubs for each employee
-        // save payroll data
+    public Payroll(List<Employee> employees) {
+        this.employees = employees;
     }
 
-    // other methods for managing employee data
+    public void calculateSalaries() {
+        employees.forEach(EmployeeInfoService::showEmployeeInfo);
+        employees.forEach(PayStubService::pay);
+    }
 }
 
